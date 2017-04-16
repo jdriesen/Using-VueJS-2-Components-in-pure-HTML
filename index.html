@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if gt IE 9]> <html lang="en" class="ie"> <![endif]-->
+<!--[if !IE]><!-->
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8">
+		<title>Vue App</title>
+		<meta name="description" content="VueApp Phobos">
+		<meta name="author" content="Johnny Driesen">
+
+    <!-- Mobile Meta -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="./favicon.png" />
+
+    <!-- Latest compiled and minified Boostrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional Boostrap Theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  </head>
+
+  <body>
+    <div id="app" class="container theme-showcase" role="main" >
+      <div class="page-header">
+        <h1>Some VueJS Samples used in pure HTML</h1>
+      </div>
+
+      <!-- Start of userdefined components .... -->
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Super Basic VueJS Component (Messaging)</h3>
+            </div>
+            <div class="panel-body">
+              <!-- The Styling is done in the Component itself... -->
+              <messaging>this is the default text</messaging>
+            </div>
+          </div>
+        </div><!-- /.col-sm-12 -->
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Component with Property (phobos label)</h3>
+            </div>
+            <div class="panel-body">
+              <!-- The Styling is done in the Component itself... -->
+              <!-- Take care about and watch out for camelCase Notations !! -->
+              <phobos-label mytext="Alooohaaa"></phobos-label>
+            </div>
+          </div>
+        </div><!-- /.col-sm-12 -->
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Counting with Emitting Events (button-counter)</h3>
+            </div>
+            <div class="panel-body">
+              <p>{{ total }}</p>
+              <!-- The styling of the buttons is set in the component -->
+              <button-counter></button-counter>
+              <button-counter @increment="incrementTotal"></button-counter>
+            </div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+      </div>
+
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Get Data from jsonplaceholder via API (button-api)</h3>
+            </div>
+            <div class="panel-body">
+              <!-- The styling of the buttons is set in the component -->
+              <button-api></button-api>
+              <br />
+              <h4>The user data</h4>
+              <div class="row">
+
+                <div class="col-sm-1">
+                  ID: <strong>{{user.id}}</strong>
+                </div> <!-- ./col -->
+
+                <div class="col-sm-3">
+                  Name: <strong>{{user.name}}</strong>
+                </div> <!-- ./col -->
+
+                <div class="col-sm-3">
+                  Email: <strong>{{user.email}}</strong>
+                </div> <!-- ./col -->
+
+                <div class="col-sm-3">
+                  Street: <strong>{{user.address.street}}</strong>
+                </div> <!-- ./col -->
+
+                <div class="col-sm-2">
+                  City: <strong>{{user.address.city}}</strong>
+                </div> <!-- ./col -->
+
+              </div> <!-- ./row -->
+
+            </div> <!-- ./ panel-body -->
+
+          </div> <!-- ./ panel -->
+
+        </div><!-- /.col-sm-12 -->
+      </div>
+
+
+      <div class="alert alert-danger" role="alert">
+        <strong>Oh snap!</strong> This is the end...
+      </div>
+
+    </div> <!-- ./app -->
+
+    <!-- The Basic VueJS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.min.js"></script>
+    <!-- The AXIOS... Needed for API calls... -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+
+    <!-- Application Specific VueJS Components -->
+    <script src="./vue-components.js"></script>
+
+    <!-- Instantiate the Vue App -->
+    <script src="./app.js"></script>
+    </body>
+</html>

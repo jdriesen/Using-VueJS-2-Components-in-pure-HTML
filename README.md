@@ -1,4 +1,4 @@
-# Using-VueJS-Components-in-pure-HTML
+# Using VueJS 2 Components in pure HTML
 Ever been wondering how to use VueJS 'stand-alone' components in pure HTML ?
 
 Well, maybe this is a start for you...
